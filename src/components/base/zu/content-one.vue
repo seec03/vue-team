@@ -1,0 +1,48 @@
+<template>
+	<div class="box-one">
+				<div class="title">
+					<h2>{{data.title.substr(0,20)+'...'}}</h2>
+					<div class="news">
+						<div class="type">{{data.name}}</div>
+						<div class="top">{{data.top}}</div>
+					</div>
+				</div>
+				<div class="img">
+					<img :src="data.img[0].img1" alt="" />
+				</div>
+	</div>
+</template>
+
+<script>
+	export default{
+		props:{
+			data:{
+				type:Object,
+				default:()=>{}
+			}
+		},
+		data(){
+			return{
+
+			}
+		},
+		created(){
+
+		}
+		
+	}
+</script>
+
+<style scoped lang="scss">
+@import '../../../assets/css/pxrem.scss';
+ .box-one{width:100%;padding:px2rem(35) px2rem(28);display: flex;justify-content: space-between;border-bottom:px2rem(1) solid #f5f5f5;box-sizing: border-box; }
+	.box-one .title{padding-right: px2rem(15);box-sizing: border-box;}
+	.box-one .title h2{font-size: px2rem(32);}
+	.box-one .title .news{display: flex;margin-top: px2rem(29)}
+	.box-one .title .news .type{color:#aaa;font-size: px2rem(25);}
+	.box-one .title .news .top{border-radius:px2rem(20);color:white;background: #ff7103; width:px2rem(84);height:px2rem(35);margin-left: px2rem(10);text-align: center;line-height: px2rem(35);}
+	.box-one .img{width:px2rem(303);height:px2rem(170);border-radius:px2rem(20);overflow: hidden;}
+	.box-one .img img{width:100%;height:100%}
+
+
+</style>
