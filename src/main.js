@@ -8,7 +8,7 @@ import VueAxios from 'vue-axios'
 import Mint from 'mint-ui';
 Vue.use(Mint);
 Vue.config.productionTip = false
-Vue.use(axios,VueAxios)
+Vue.use(VueAxios,axios)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
