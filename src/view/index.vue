@@ -44,7 +44,7 @@
 				//导航栏的设置
 				let length=this.$refs.navli.length
 				let lengwidth=this.$refs.navli[0].clientWidth
-				this.$refs.navul.style.width=((lengwidth+50)*length-70)/32+'rem'
+				this.$refs.navul.style.width=((lengwidth+50)*length)/32+'rem'
 			},
 			liclick(index,id,title){
 				this.liactive=index

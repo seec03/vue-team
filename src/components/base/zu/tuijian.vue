@@ -86,20 +86,11 @@
 <style scoped lang="scss">
 	@import '../../../assets/css/pxrem.scss';
 	
-	.tui{margin-top: px2rem(120);}
+	.tui{margin-top: px2rem(120);/*padding-bottom: px2rem(120);*/}
 	.tui .swiper{width:100%;height:px2rem(464);border-radius:px2rem(15);overflow: hidden;padding: 0 px2rem(28);box-sizing: border-box;}
 	.tui .swiper .swiper-container{width:100%;background: red;height:100%;border-radius:px2rem(20) ;overflow: hidden;}
 	.main-content{}
-	 /*.box-one{width:100%;padding:px2rem(35) px2rem(28);border-bottom:px2rem(1) solid #f5f5f5;box-sizing: border-box; }
 
-	.box-one .title h2{font-size: px2rem(32);}
-	.box-one .img{width:100%;display: flex;justify-content: space-between;margin-top: px2rem(10);height:px2rem(500);background: red;position:relative}
-	.box-one .img video{width:100%;height:px2rem(500);position:absolute;left: 0;top:0}
-.box-one .news{display: flex;justify-content: space-between;margin-top: px2rem(30);color:#aaa;font-size: px2rem(25);align-items: center;}
-	.box-one .news .time{display: flex;align-items: center;}
-	.box-one .news .type{}
-	.box-one .news .time img{width:px2rem(33);height:px2rem(33);margin-right:px2rem(40) ;}
-	.box-one .news .time span{}*/
 	
 	
 	
