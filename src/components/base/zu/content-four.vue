@@ -1,7 +1,7 @@
 <template>
 	<div class="box-one">
 				<div class="title">
-					<h2>{{data.title.substr(0,26)+'...'}}</h2>
+					<h2>{{data.title.title.substr(0,26)+'...'}}</h2>
 					
 				</div>
 				

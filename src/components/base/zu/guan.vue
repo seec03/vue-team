@@ -2,7 +2,7 @@
 	<div class="guan">
 		<div class="none">
 			<div class="box">
-			<img src="@/assets/img/zu/guanzhu.png" alt="" />
+			<img src="/static/img/zu/zu/guanzhu.png" alt="" />
 			<div class="title" @click="todahao">添加关注</div>
 			</div>
 		</div>

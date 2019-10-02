@@ -134,7 +134,7 @@
 			},
 			 getData(){
 			 	  this.axios.get('/static/zu/main.json').then((respon)=>{
-						this.datas=respon.data.dahao.dahaoContent
+						this.datas=respon.data.dahao
 						 console.log(this.datas)
 						 
 					})
@@ -166,7 +166,7 @@
 <style scoped lang="scss">
 	@import '../../../assets/css/pxrem.scss';
 	
-	.hao{margin-top: px2rem(100);position:relative}
+	.hao{margin-top: px2rem(100);position:relative;padding-bottom: px2rem(175)}
 	.top{width:100%;border-bottom: 1px solid #f5f5f5;margin-top: px2rem(120);}
 	.top .title{display: flex;width:100%;box-sizing: border-box;justify-content: space-between;align-items: center;padding:0 px2rem(28);}
 	.top .title .name{font-size:px2rem(33) ;position:relative;font-weight: bold;}

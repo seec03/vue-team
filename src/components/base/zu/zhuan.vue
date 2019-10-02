@@ -51,5 +51,5 @@
 <style scoped lang="scss">
 	@import '../../../assets/css/pxrem.scss';
 	
-	.zhuan{margin-top: px2rem(100);}
+	.zhuan{margin-top: px2rem(100);padding-bottom: px2rem(175)}
 </style>

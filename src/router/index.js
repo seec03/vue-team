@@ -16,7 +16,7 @@ import sociology from '@/components/base/zu/sociology'
 import sport from '@/components/base/zu/sport'
 import zheng from '@/components/base/zu/zheng'
 import zhuan from '@/components/base/zu/zhuan'
-
+import newsbus from '@/components/base/zu/newsbus'
 Vue.use(Router)
 
 export default new Router({
@@ -94,6 +94,11 @@ export default new Router({
       path: '/',
       name: 'home',
       component: home
+    },
+    {
+    	path: '/newsbus',
+      name: 'newsbus',
+      component: newsbus
     }
   ]
 })

@@ -1,7 +1,7 @@
 <template>
-	<div class="box-one">
+	<div class="box-one" @click="tonewsbus">
 				<div class="title">
-					<h2>{{data.title.substr(0,20)+'...'}}</h2>
+					<h2>{{data.title.title.substr(0,20)+'...'}}</h2>
 					<div class="news">
 						<div class="type">{{data.name}}</div>
 						<div class="top">{{data.top}}</div>
@@ -25,6 +25,14 @@
 			return{
 
 			}
+		},
+		methods:{
+			 tonewsbus(){
+			 
+			 	this.$router.push({
+			 		path:"/newsbus"
+			 	})
+			 }
 		},
 		created(){
 

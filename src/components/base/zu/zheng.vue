@@ -59,7 +59,7 @@
 
 <style scoped lang='scss'>
 	@import '../../../assets/css/pxrem.scss';
-	.zheng{margin-top: px2rem(100);}
+	.zheng{margin-top: px2rem(100);padding-bottom: px2rem(175)}
 	
 	
 	

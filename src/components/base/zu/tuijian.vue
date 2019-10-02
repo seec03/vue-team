@@ -60,6 +60,7 @@
 					})
 			 }
 			
+			
 		},
 		created(){
 			this.getData()
@@ -86,7 +87,7 @@
 <style scoped lang="scss">
 	@import '../../../assets/css/pxrem.scss';
 	
-	.tui{margin-top: px2rem(120);/*padding-bottom: px2rem(120);*/}
+	.tui{margin-top: px2rem(120);padding-bottom: px2rem(175)}
 	.tui .swiper{width:100%;height:px2rem(464);border-radius:px2rem(15);overflow: hidden;padding: 0 px2rem(28);box-sizing: border-box;}
 	.tui .swiper .swiper-container{width:100%;background: red;height:100%;border-radius:px2rem(20) ;overflow: hidden;}
 	.main-content{}

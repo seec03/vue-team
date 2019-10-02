@@ -59,6 +59,6 @@
 
 <style scoped lang="scss">
 	@import '../../../assets/css/pxrem.scss';
-	.country{margin-top: px2rem(100);}
+	.country{margin-top: px2rem(100);padding-bottom: px2rem(175)}
 	
 </style>

@@ -58,6 +58,6 @@
 
 <style scoped lang='scss'>
 	@import '../../../assets/css/pxrem.scss';
-	.game{margin-top: px2rem(100);}
+	.game{margin-top: px2rem(100);padding-bottom: px2rem(175)}
 	
 </style>

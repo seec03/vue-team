@@ -62,6 +62,6 @@
 
 <style scoped lang='scss'>
 	@import '../../../assets/css/pxrem.scss';
-	.sport{margin-top: px2rem(100);}
+	.sport{margin-top: px2rem(100);padding-bottom: px2rem(175)}
 	
 </style>
