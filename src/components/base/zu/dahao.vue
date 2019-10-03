@@ -19,10 +19,10 @@
 		</div>
 		
 			<div v-for="(item,index) in datas">
-				<contentone v-if="item.type=='one'" :data="item"></contentone>
-				<contenttwo v-if="item.type=='two'" :data="item"></contenttwo>
-				<contentthree v-if="item.type=='three'" :data="item"></contentthree>
-				<contentfour v-if="item.type=='four'" :data="item"></contentfour>
+				<contentone v-if="item.type=='one'" :data="{item:item,datamain:datas,back:'dahao'}"></contentone>
+				<contenttwo v-if="item.type=='two'" :data="{item:item,datamain:datas,back:'dahao'}"></contenttwo>
+				<contentthree v-if="item.type=='three'" :data="{item:item,datamain:datas,back:'dahao'}"></contentthree>
+				<contentfour v-if="item.type=='four'" :data="{item:item,datamain:datas,back:'dahao'}"></contentfour>
 			</div>
 		
 		<!--添加关注组件-->

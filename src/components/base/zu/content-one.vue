@@ -1,14 +1,14 @@
 <template>
-	<div class="box-one" @click="tonewsbus">
+	<div class="box-one" @click="tonewsbus(data)">
 				<div class="title">
-					<h2>{{data.title.title.substr(0,20)+'...'}}</h2>
+					<h2>{{data.item.title.title.substr(0,20)+'...'}}</h2>
 					<div class="news">
-						<div class="type">{{data.name}}</div>
-						<div class="top">{{data.top}}</div>
+						<div class="type">{{data.item.name}}</div>
+						<div class="top">{{data.item.top}}</div>
 					</div>
 				</div>
 				<div class="img">
-					<img :src="data.img[0].img1" alt="" />
+					<img :src="data.item.img[0].img1" alt="" />
 				</div>
 	</div>
 </template>
@@ -27,15 +27,21 @@
 			}
 		},
 		methods:{
-			 tonewsbus(){
-			 
+			 tonewsbus(data){
+
 			 	this.$router.push({
-			 		path:"/newsbus"
+			 		path:"/newsbus",
+			 		query:{
+			 			data:data.item,
+			 			datamain:data.datamain,
+			 			back:data.back
+			 		}
 			 	})
+			 
 			 }
 		},
 		created(){
-
+				
 		}
 		
 	}

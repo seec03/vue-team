@@ -3,10 +3,10 @@
 			
 		<div class="main-content">
 			<div v-for="(item,index) in data">
-				<contentone v-if="item.type=='one'" :data="item"></contentone>
-				<contenttwo v-if="item.type=='two'" :data="item"></contenttwo>
-				<contentthree v-if="item.type=='three'" :data="item"></contentthree>
-				<contentfour v-if="item.type=='four'" :data="item"></contentfour>
+				<contentone v-if="item.type=='one'" :data="{item:item,datamain:data,back:'sport'}"></contentone>
+				<contenttwo v-if="item.type=='two'" :data="{item:item,datamain:data,back:'sport'}"></contenttwo>
+				<contentthree v-if="item.type=='three'" :data="{item:item,datamain:data,back:'sport'}"></contentthree>
+				<contentfour v-if="item.type=='four'" :data="{item:item,datamain:data,back:'sport'}"></contentfour>
 			</div>
 			
 			

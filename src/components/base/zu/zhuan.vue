@@ -3,7 +3,7 @@
 		<div class="main-content">
 			<div v-for="(item,index) in data">
 				
-				<contenttwo  :data="item"></contenttwo>
+				<contenttwo  :data="{item:item,datamain:data,back:'zhuan'}"></contenttwo>
 				
 			</div>
 			

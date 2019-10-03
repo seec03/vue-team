@@ -48,6 +48,8 @@
 			},
 			liclick(index,id,title){
 				this.liactive=index
+				//通过缓存的方式将 导航栏的下标保存下来，以防下次刷新只显示 第一个
+				localStorage.setItem('index',JSON.stringify(index))
 				this.$router.push({
 					path:title,
 					query:{
@@ -62,7 +64,8 @@
 			},500)
 		},
 		created(){
-			
+			//拿取缓存中的下标 index 判断导航栏到第几个，如果是第一次就是0
+			this.liactive=JSON.parse(localStorage.getItem('index'))||0
 		},
 		components:{
 			scroll
@@ -85,14 +88,6 @@
 	.nav .box{}
 	.nav ul li::after{content: "";display: none;position: absolute;width:px2rem(30);height:px2rem(5);border-radius: px2rem(5);background: white;bottom:px2rem(10);left: 50%;transform: translateX(-50%);}
 	.nav ul li.active::after{display: block;}
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	

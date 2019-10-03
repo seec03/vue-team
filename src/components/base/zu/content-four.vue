@@ -1,22 +1,22 @@
 <template>
-	<div class="box-one">
+	<div class="box-one" @click="tonewsbus(data)">
 				<div class="title">
-					<h2>{{data.title.title.substr(0,26)+'...'}}</h2>
+					<h2>{{data.item.title.title.substr(0,26)+'...'}}</h2>
 					
 				</div>
 				
-				<div class="img">
-					<video width="100%" height="100%" :src="data.img[1].img1" controls="" style="object-fit: fill" :poster="data.img[0].img1">
+				<div class="img" >
+					<video width="100%" height="100%" :src="data.item.img[1].img1" controls="" style="object-fit: fill" :poster="data.item.img[0].img1">
 					</video>
 				</div>
 				<div class="news">
-					<div class="type">{{data.name}}</div>
+					<div class="type">{{data.item.name}}</div>
 					<div class="time">
 						<img src="@/assets/img/zu/icon-1.png" alt="" />
-						<span>{{data.time}}</span>
+						<span>{{data.item.time}}</span>
 					</div>
 				</div>
-			</div>
+	</div>
 	
 </template>
 
@@ -27,6 +27,21 @@
 				type:Object,
 				default:()=>{}
 			}
+		
+		},
+		methods:{
+			tonewsbus(data){
+			
+			 	this.$router.push({
+			 		path:"/newsbus",
+			 		query:{
+			 			data:data.item,
+			 			datamain:data.datamain,
+			 			back:data.back
+			 		}
+			 	})
+			 
+			 }
 		}
 	}
 	

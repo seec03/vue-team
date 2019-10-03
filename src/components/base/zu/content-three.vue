@@ -1,19 +1,19 @@
 <template>
-				<div class="box-one">
+				<div class="box-one" @click="tonewsbus(data)">
 				<div class="title">
-					<h2>{{data.title.title.length>27?data.title.title.substr(0,26)+'...':data.title.title}}</h2>
+					<h2>{{data.item.title.title.length>27?data.item.title.title.substr(0,26)+'...':data.item.title.title}}</h2>
 					
 				</div>
 				
 				<div class="img">
-					<img :src="item.img1" alt=""  v-for="(item,index) in data.img"/>
+					<img :src="item.img1" alt=""  v-for="(item,index) in data.item.img"/>
 					
 				</div>
 				<div class="news">
-					<div class="type">{{data.name}}</div>
+					<div class="type">{{data.item.name}}</div>
 					<div class="time">
 						<img src="@/assets/img/zu/icon-1.png" alt="" />
-						<span>{{data.time}}</span>
+						<span>{{data.item.time}}</span>
 					</div>
 				</div>
 			</div>
@@ -26,6 +26,20 @@
 				type:Object,
 				default:()=>{}
 			}
+		},
+		methods:{
+			tonewsbus(data){
+			 
+			 	this.$router.push({
+			 		path:"/newsbus",
+			 		query:{
+			 			data:data.item,
+			 			datamain:data.datamain,
+			 			back:data.back
+			 		}
+			 	})
+			 
+			 }
 		}
 	}
 </script>

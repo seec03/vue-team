@@ -1,16 +1,16 @@
 <template>
-	<div class="box-one">
+	<div class="box-one" @click="tonewsbus(data)">
 				<div class="title">
-					<h2>{{data.title.title.substr(0,20)+'...'}}</h2>
+					<h2>{{data.item.title.title.substr(0,20)+'...'}}</h2>
 					<div class="news">
-						<div class="type">{{data.name}}</div>
+						<div class="type">{{data.item.name}}</div>
 						<div class="border">|</div>
-						<div class="top">{{data.time}}</div>
+						<div class="top">{{data.item.time}}</div>
 						<img src="@/assets/img/zu/icon-1.png" alt="" />
 					</div>
 				</div>
 				<div class="img">
-					<img :src="data.img[0].img1" alt="" />
+					<img :src="data.item.img[0].img1" alt="" />
 				</div>
 			</div>
 </template>
@@ -22,6 +22,20 @@
 				type:Object,
 				default:()=>{}
 			}
+		},
+		methods:{
+			 tonewsbus(data){
+			 
+			 	this.$router.push({
+			 		path:"/newsbus",
+			 		query:{
+			 			data:data.item,
+			 			datamain:data.datamain,
+			 			back:data.back
+			 		}
+			 	})
+			 
+			 }
 		}
 	}
 </script>
