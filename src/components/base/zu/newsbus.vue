@@ -39,7 +39,7 @@
 			<div class="textcontent">
 				
 				<img :src="item.img1" alt="" v-for="(item,index) in datas.img" v-if="datas.type!=='four'"/>
-				<video width="100%" height="300" :src="datas.img[1].img1" controls="" style="object-fit: fill" :poster="datas.img[0].img1" v-if="datas.type==='four'">
+				<video width="100%" height="300" src="@/assets/img/zu/我的梦.mp4" controls="" style="object-fit: fill" :poster="datas.img[0].img1" v-if="datas.type==='four'">
 				</video>
 				<div>{{datas.title.content}}</div>
 				

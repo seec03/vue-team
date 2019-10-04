@@ -77,10 +77,10 @@
 
 <style lang="scss" scoped>
 	@import '../assets/css/pxrem.scss';
-	.top{width:100%;height:px2rem(105);background: #0896ec;position: fixed;top:0;color:white;padding: 0 px2rem(27);display: flex;align-items: center;z-index: 1000;}
+	.top{width:100%;height:px2rem(105);background: #0896ec;position: fixed;top:0;color:white;padding: 0 px2rem(27);display: flex;align-items: center;z-index: 1000;justify-content: space-around;box-sizing: border-box;}
 	.top img:nth-of-type(1){width:px2rem(75);height:px2rem(75);}
 	.top img:nth-of-type(2){width:px2rem(55);height:px2rem(55);}
-	.main .nav{width:px2rem(534);height:px2rem(75);margin: 0 px2rem(20);line-height: px2rem(75);overflow: hidden;position:relative}
+	.main .nav{width:70%;height:px2rem(75);margin: 0 px2rem(20);line-height: px2rem(75);overflow: hidden;position:relative}
 	.nav ul{}
 	.nav ul li{float: left;padding: 0 px2rem(20);font-size:px2rem(28) ;position:relative}
 	

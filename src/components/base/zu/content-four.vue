@@ -6,7 +6,7 @@
 				</div>
 				
 				<div class="img" >
-					<video width="100%" height="100%" :src="data.item.img[1].img1" controls="" style="object-fit: fill" :poster="data.item.img[0].img1">
+					<video width="100%" height="100%" src="@/assets/img/zu/我的梦.mp4" controls="" style="object-fit: fill" :poster="data.item.img[0].img1">
 					</video>
 				</div>
 				<div class="news">
