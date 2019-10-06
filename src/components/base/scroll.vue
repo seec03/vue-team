@@ -13,19 +13,12 @@
 		data(){
 			return{
 				rights:{},
-				lefts:{}
-				
 			}
 		},
 		methods:{
-			
 			init(){
 				this.rights=new Bscroll(this.$refs.wrapper,{click:true,probeType:3,scrollX:true,scrollY:true})
-//				this.lefts=new Bscroll(this.$refs.wrapper,{click:true,probeType:3,scrollX:true,scrollY:false})
-				
-				
 			}
-			
 		},
 		created(){
 			setTimeout(()=>{
@@ -39,7 +32,5 @@
 </script>
 
 <style scoped lang="scss">
-	
-	
-	
+
 </style>
