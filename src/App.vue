@@ -3,32 +3,32 @@
     <router-view />
     <div class="footer">
       <ol>
-        <li :class="{active:id==0}">
-          <router-link :to='{path:"/index/tuijian",query:{id:0}}'>
+        <li :class="{active:curIndex==0}">
+          <router-link :to='{path:"/index/tuijian",query:{curIndex:0}}'>
             <span class="iconfont icon-shouye"></span>
             <p>首页</p>
           </router-link>
         </li>
-        <li :class="{active:id==1}">
-          <router-link :to='{path:"/index/tuijian",query:{id:1}}'>
+        <li :class="{active:curIndex==1}">
+          <router-link :to='{path:"/index/tuijian",query:{curIndex:1}}'>
             <span class="iconfont icon-icon_video"></span>
             <p>视频</p>
           </router-link>
         </li>
-        <li :class="{active:id==2}">
-          <router-link :to='{path:"/baoliao",query:{id:2}}'>
+        <li :class="{active:curIndex==2}">
+          <router-link :to='{path:"/baoliao",query:{curIndex:2}}'>
             <span class="iconfont icon-gantanhao"></span>
             <p>报料</p>
           </router-link>
         </li>
-        <li :class="{active:id==3}">
-          <router-link :to='{path:"/index/tuijian",query:{id:3}}'>
+        <li :class="{active:curIndex==3}">
+          <router-link :to='{path:"/zw-listen",query:{curIndex:3}}'>
             <span class="iconfont icon-erji"></span>
             <p>随身听</p>
           </router-link>
         </li>
-        <li :class="{active:id==4}">
-          <router-link :to='{path:"/index/tuijian",query:{id:4}}'>
+        <li :class="{active:curIndex==4}">
+          <router-link :to='{path:"/index/tuijian",query:{curIndex:4}}'>
             <span class="iconfont icon-wode"></span>
             <p>我的</p>
           </router-link>
@@ -43,11 +43,11 @@ export default {
   name: "App",
   data(){
     return {
-      id:0
+      curIndex:0
     }
   },
   updated(){
-    this.id = this.$route.query.id
+    this.curIndex = this.$route.query.curIndex
   }
 };
 </script>

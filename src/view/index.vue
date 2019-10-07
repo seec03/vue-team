@@ -88,9 +88,4 @@
 	.nav .box{}
 	.nav ul li::after{content: "";display: none;position: absolute;width:px2rem(30);height:px2rem(5);border-radius: px2rem(5);background: white;bottom:px2rem(10);left: 50%;transform: translateX(-50%);}
 	.nav ul li.active::after{display: block;}
-	
-	
-	
-	
-	
 </style>

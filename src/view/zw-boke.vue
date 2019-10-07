@@ -7,8 +7,8 @@
 		</div>
 		<div class="content">
 			<ul>
-				<li v-for="item in data">
-					<img :src="item.img"/>
+				<li v-for="(item,index) in data" :key='index'>
+					<img :src='item.img'/>
 					<p>{{item.txt}}</p>
 				</li>
 				
@@ -28,8 +28,13 @@
 		methods:{
 			getData(){
 			 	bokedata().then((response) => {			 		
-					this.data=response.data					
+					this.data=response.data		
+					this.data.forEach((item) => {
+						console.log(item.img)
+						item.img=require(item.img)
+					});			
 					console.log(this.data)
+
 				})
 
 			},

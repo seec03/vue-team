@@ -4,28 +4,28 @@
 			"img":"../assets/img/li/pic1.png",
 			"txt":"我家住在解放路上"
 		},{
-			"img":"@/assets/img/li/pic01.png",
+			"img":"../assets/img/li/pic01.png",
 			"txt":"中华美食故事"
 		},{
-			"img":"./assets/img/li/pic02.png",
+			"img":"../assets/img/li/pic02.png",
 			"txt":"豫广新闻"
 		},{
-			"img":"@/assets/img/li/pic03.png",
+			"img":"../assets/img/li/pic03.png",
 			"txt":"与你同行"
 		},{
-			"img":"@/assets/img/li/pic04.png",
+			"img":"../assets/img/li/pic04.png",
 			"txt":"共和国的足迹"
 		},{
-			"img":"@/assets/img/li/pic05.png",
+			"img":"../assets/img/li/pic05.png",
 			"txt":"对话民生"
 		},{
-			"img":"@/assets/img/li/pic01.png",
+			"img":"../assets/img/li/pic01.png",
 			"txt":"大医生来了"
 		},{
-			"img":"@/assets/img/li/pic01.png",
+			"img":"../assets/img/li/pic01.png",
 			"txt":"我的祖国我的家"
 		},{
-			"img":"@/assets/img/li/pic01.png",
+			"img":"../assets/img/li/pic01.png",
 			"txt":"为书而来"
 		}
 	]
