@@ -8,12 +8,7 @@ import VueAxios from 'vue-axios'
 import Mint from 'mint-ui';
 Vue.use(Mint);
 Vue.config.productionTip = false
-Vue.use(axios,VueAxios)
-Vue.prototype.$http = axios //将axios挂载在Vue实例原型上
-// 设置axios请求的token
-axios.defaults.headers.common['token'] = 'f4c902c9ae5a2a9d8f84868ad064e706'
-//设置请求头
-axios.defaults.headers.get["Content-type"] = "application/json"
+Vue.use(VueAxios,axios)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

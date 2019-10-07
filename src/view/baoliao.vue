@@ -42,7 +42,7 @@
 <script>
 import tab from "../components/page/baoliao/tab";
 import scroll from "../components/base/scroll";
-import {paike} from '../api/index';
+// import {paike} from '../api/index';
 export default {
   components: {
     tab,
