@@ -16,6 +16,10 @@ import zheng from '@/components/base/zu/zheng'
 import zhuan from '@/components/base/zu/zhuan'
 import newsbus from '@/components/base/zu/newsbus'
 import baoliao from '@/view/baoliao.vue';
+import listen from '@/view/zw-listen'
+import boke from '@/view/zw-boke'
+import radio from '@/view/zw-radio'
+
 Vue.use(Router)
 
 export default new Router({
@@ -98,6 +102,24 @@ export default new Router({
       path: '/baoliao',
       name: 'baoliao',
       component: baoliao
-    }
+    },
+    {
+    	path: '/zw-listen',
+      name: 'listen',
+      component: listen,
+      redirect:'zw-listen/zw-boke',
+      children:[
+      	{
+      		path: 'zw-boke',
+      		name: 'boke',
+      		component: boke,
+      	},
+      	{
+      		path: 'zw-radio',
+      		name: 'radio',
+      		component: radio,
+      	}
+      ]
+    },
   ]
 })
