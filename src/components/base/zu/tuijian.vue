@@ -17,8 +17,6 @@
 				<contentthree v-if="item.type=='three'" :data="{item:item,datamain:data,back:'tuijian'}"></contentthree>
 				<contentfour v-if="item.type=='four'" :data="{item:item,datamain:data,back:'tuijian'}"></contentfour>
 			</div>
-			
-			
 		</div>
 		
 	</div>
@@ -44,7 +42,8 @@
 				swip:[],
 				data:[],
 				scrolls:{},
-				ulli:0
+				ulli:0,
+				timer:""
 			}
 		},
 		methods:{
@@ -94,8 +93,11 @@
 				this.init()
 			},500)
 		},
+		destroyed(){
+			clearInterval(this.timer)
+		},
 		mounted(){
-			setInterval(()=>{
+			this.timer=setInterval(()=>{
 				this.next()
 			},3500)
 //			setTimeout(()=>{
@@ -121,7 +123,7 @@
 	
 	.tui{margin-top: px2rem(120);padding-bottom: px2rem(175)}
 	.tui .swiper{width:px2rem(693);height:px2rem(464);border-radius:px2rem(15);overflow: hidden;margin:0 auto;box-sizing: border-box;position:relative}
-	.swiper .content{height:100%;transition: 0.5s;}
+	.swiper .content{height:100%;transition: 0.5s;transform: translateX(0);}
 	.swiper .content img{display: block;float: left;width:px2rem(749);height:px2rem(464);}
 	.swiper ul{position:absolute;bottom:px2rem(20);display: flex;width:100%;justify-content: space-around;z-index: 200;}
     .swiper ul li{height:px2rem(4);background: white;width:px2rem(139.8);margin:0 px2rem(10)}	
