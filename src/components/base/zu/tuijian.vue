@@ -1,15 +1,16 @@
 <template>
 	<div class="tui">
-		<scroll class="swiper" ref="scro">
-			<div class="content" ref='content'>
-				<img :src="item.img[0].img1" alt="" v-for="(item,index) in swip" ref='contentimg' @click="contentimg(item)"/>
+		<div class="swiper">
+			<mt-swipe :auto="2000" class="swiper" >
+				<mt-swipe-item  v-for="(item,index) in swip" ><img :src="item.img[0].img1" alt="" @click="contentimg(item)"/></mt-swipe-item>
 				
-			</div>
-			<ul>
-				<li v-for="(item,index) in swip" :class="{active:index==ulli}" @click="ulliclick(index)"></li>
+			</mt-swipe>
+
+			<!--<ul>
+				<li v-for="(item,index) in swip"></li>
 				
-			</ul>
-		</scroll>
+			</ul>-->
+		</div>
 		<div class="main-content">
 			<div v-for="(item,index) in data">
 				<contentone v-if="item.type=='one'" :data="{item:item,datamain:data,back:'tuijian'}"></contentone>
@@ -23,44 +24,35 @@
 </template>
 
 <script>
+	//引入 mint-ui 的轮播图
+	import { Swipe, SwipeItem } from 'mint-ui';
 	
+	import 'mint-ui/lib/style.css'
 	import contentone from '@/components/base/zu/content-one'
 	import contenttwo from '@/components/base/zu/content-two'
 	import contentthree from '@/components/base/zu/content-three'
 	import contentfour from '@/components/base/zu/content-four'
-	import scroll from '@/components/base/scroll'
 	export default{
 		components:{
 			contentone,
 			contenttwo,
 			contentthree,
 			contentfour,
-			scroll
+			'mt-swipe': Swipe,
+  			'mt-swipe-item': SwipeItem
+		
 		},
 		data(){
 			return{
 				swip:[],
 				data:[],
-				scrolls:{},
-				ulli:0,
 				timer:""
 			}
 		},
 		methods:{
-			init(){
-				let width=this.$refs.contentimg[0].clientWidth
-				console.log(this.swip.length,width)
-				this.scrolls=this.$refs.scro.rights
-				this.$refs.content.style.width=(this.swip.length*width)/16+'rem'
-			},
-			//封装一个方法用来实现轮播图
-			next(){
-				this.ulli++;
-				if(this.ulli>this.swip.length-1){
-					this.ulli=0
-				}
-				this.$refs.content.style.transform='translateX('+this.ulli*-this.$refs.contentimg[0].clientWidth/16+'rem)'
-			},
+
+			
+			
 			//点击轮播图的图片，跳转对应的详情页面
 			contentimg(data){
 				this.$router.push({
@@ -72,10 +64,7 @@
 			 		}
 			 	})
 			},
-			ulliclick(index){
-				this.ulli=index
-				this.$refs.content.style.transform='translateX('+this.ulli*-this.$refs.contentimg[0].clientWidth/16+'rem)'
-			},
+		
 			 getData(){
 			 	  this.axios.get('/static/zu/main.json').then((respon)=>{
 						this.data=respon.data.tuijian.tuijian
@@ -89,17 +78,13 @@
 		},
 		created(){
 			this.getData()
-			setTimeout(()=>{
-				this.init()
-			},500)
+		
 		},
 		destroyed(){
-			clearInterval(this.timer)
+			
 		},
 		mounted(){
-			this.timer=setInterval(()=>{
-				this.next()
-			},3500)
+			
 //			setTimeout(()=>{
 //				 var mySwiper = new Swiper ('.swiper-container', {
 //					autoplay: 1000,//可选选项，自动滑动 
@@ -122,13 +107,18 @@
 	@import '../../../assets/css/pxrem.scss';
 	
 	.tui{margin-top: px2rem(120);padding-bottom: px2rem(175)}
-	.tui .swiper{width:px2rem(693);height:px2rem(464);border-radius:px2rem(15);overflow: hidden;margin:0 auto;box-sizing: border-box;position:relative}
-	.swiper .content{height:100%;transition: 0.5s;transform: translateX(0);}
-	.swiper .content img{display: block;float: left;width:px2rem(749);height:px2rem(464);}
-	.swiper ul{position:absolute;bottom:px2rem(20);display: flex;width:100%;justify-content: space-around;z-index: 200;}
-    .swiper ul li{height:px2rem(4);background: white;width:px2rem(139.8);margin:0 px2rem(10)}	
-	.swiper ul li.active{background: #0000FF;}
+
+	 .mint-swipe-indicators{position:absolute;bottom:px2rem(20);display: flex;width:100%;justify-content: space-around;z-index: 200;}
+     .mint-swipe-indicators .mint-swipe-indicator{height:px2rem(4);background: white;width:px2rem(139.8);margin:0 px2rem(10)}	
+	 .mint-swipe-indicators .mint-swipe-indicator.is-active{background: #0000FF;}
 	
+	
+	 .swiper {width:96%;height:px2rem(464);border-radius:px2rem(15);overflow: hidden;margin:0 auto;box-sizing: border-box;position:relative}
+	.swiper img{width:100%;height:100%}
+	
+	.tui >>> .mint-swipe-indicators{width:100%;position:absolute;bottom:px2rem(15);display: flex;justify-content: space-around;}
+	.tui >>> .mint-swipe-indicator{width:px2rem(110);border-radius: px2rem(10);height:  px2rem(7);opacity: 1;background: rgba(0,0,0,.5);}
+	.tui >>> .mint-swipe-indicator.is-active{background: #0000FF;}
 	
 	
 	

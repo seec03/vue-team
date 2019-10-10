@@ -141,8 +141,7 @@
 			 },
 			 //计算ul总宽
 			toWidth(){
-			
-				
+
 				let width=(this.$refs.li.length*(this.$refs.li[0].clientWidth+140))/32+'rem'
 				
 				this.$refs.ul.style.width=width
